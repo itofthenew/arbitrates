@@ -1,0 +1,242 @@
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: './theme-chalk/fonts';
+
+@import './theme-chalk/index';
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgba(247, 248, 251, 1);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+//::-webkit-scrollbar {
+//  width: 5px;
+//  height: 5px;
+//}
+//
+//::-webkit-scrollbar-track-piece {
+//  background-color: rgba(0, 0, 0, 0.2);
+//  -webkit-border-radius: 6px;
+//}
+//
+//::-webkit-scrollbar-thumb:vertical {
+//  height: 5px;
+//  background-color: rgba(125, 125, 125, 0.7);
+//  -webkit-border-radius: 6px;
+//}
+//
+//::-webkit-scrollbar-thumb:horizontal {
+//  width: 5px;
+//  background-color: rgba(125, 125, 125, 0.7);
+//  -webkit-border-radius: 6px;
+//}
+
+.clearfix {
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+/*滚动条样式*/
+.yto-scrollbar {
+  .el-scrollbar__bar {
+    border-radius: 0;
+    opacity: 1;
+    top: 0;
+    right: 0;
+  }
+  .el-scrollbar__bar.is-vertical {
+    width: 12px;
+  }
+  .el-scrollbar__thumb {
+  }
+}
+
+.yto-x-auto {
+  overflow-x: auto;
+}
+
+/*显示省略号*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.formTextArea {
+  .el-form-item__content {
+    width: calc(100% - 200px);
+  }
+}
+
+textarea,
+input {
+  &::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: $--color-main;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px $--color-main, 0 0 5px $--color-main;
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: $--color-main;
+  border-left-color: $--color-main;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 过渡动画 横向渐变
+.fade-transverse-leave-active,
+.fade-transverse-enter-active {
+  transition: all 0.5s;
+}
+
+.fade-transverse-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transverse-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+// 过渡动画 缩放渐变
+.fade-scale-leave-active,
+.fade-scale-enter-active {
+  transition: all 0.5s;
+}
+
+.fade-scale-enter {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.fade-scale-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.input_mini {
+  .el-select, .el-select--medium {
+    input {
+      height: 28px !important;
+    }
+  }
+}
+
+.dialogDiv {
+  .el-col {
+    margin-bottom: 5px;
+  }
+}
+
+.el-autocomplete-suggestion.el-popper {
+  width: 280px !important;
+  li {
+    padding: 0 5px !important;
+  }
+}
+
+.el-select-dropdown.el-popper {
+  max-width: 280px !important;
+  li {
+    padding: 0 5px !important;
+  }
+}

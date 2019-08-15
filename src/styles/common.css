@@ -1,0 +1,40 @@
+.bodyPadding {
+    padding:10px;
+    flex: 1;
+    background:rgb(242, 237, 245);
+    margin-top:0px;
+  }
+  .containerBgc {
+    background:#fff;
+    padding:10px;
+  }
+  .buttonArea {
+    padding-top:5px;
+    
+  }
+  .buttonArea.nopadding {
+    padding-top:0px;
+  }
+ 
+  .buttonArea>button[type="button"] {
+    font-size:12px !important;
+    padding: 7px 32px;
+  }
+  .iconBtn>button {
+    padding: 7px 9px;
+  }
+  .block {
+    margin-top:10px;
+  }
+  .queryHeader {
+    overflow: hidden;
+  }
+  .queryList {
+    float: left;
+
+  }
+  .btnPosition {
+    margin-bottom:10px;
+  }
+ 
+ 

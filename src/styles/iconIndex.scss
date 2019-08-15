@@ -1,0 +1,27 @@
+.modify {
+  background-size: 20px 20px;
+  background-image: url("../assets/img/icons/edit.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.remove{
+  background-size: 20px 20px;
+  background-image: url("../assets/img/icons/delete.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.see{
+  background-size: 20px 20px;
+  background-image: url("../assets/img/icons/see.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  cursor: pointer;
+}
